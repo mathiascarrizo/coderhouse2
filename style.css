@@ -1,0 +1,600 @@
+/*crearemos colores para los parrafos */
+
+p {
+  color: black;
+  font-size: 30px;
+}
+
+.titulo-principal {
+  color: white;
+  font-size: 65px;
+}
+h1 {
+  color: black;
+  text-align: center;
+}
+
+body {
+  background-color: gray;
+}
+.header {
+  text-align: center;
+}
+
+.titulos {
+  color: white;
+}
+
+.titulos1 {
+  color: darkolivegreen;
+}
+
+section {
+  text-align: center;
+}
+
+section h2 {
+  text-align: center;
+}
+
+.titulos2 {
+  color: white !important;
+}
+
+.titulos3 {
+  color: darkolivegreen;
+}
+.titulos4 {
+  color: red;
+}
+
+.contacto-link {
+  font-size: 24px; /* Cambio de tamaño de enlace de contacto */
+  font-weight: bold;
+}
+
+body {
+  background-image: url("./asssets/fotod.jpg");
+  background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que se repita */
+  background-attachment: fixed; /* Fija la imagen para que no se mueva al hacer scroll */
+}
+
+/*  contenedor para la imagen de fondo */
+.background-container {
+  position: relative;
+  background-image: url("./asssets/fotod.jpg"); /* Aquí va la URL de tu imagen */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh; /* O el alto que desees */
+}
+
+/* Capa oscura sobre la imagen de fondo */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /*  ajustar la opacidad
+     para que quede más oscuro o más claro */
+  z-index: 1; /* Asegura que el overlay esté sobre la imagen */
+}
+
+/* El contenido del texto */
+.content {
+  position: relative;
+  z-index: 2; /* El contenido debe estar encima de la capa oscura */
+  color: white; /* Color del texto para que resalte */
+  text-align: center;
+  padding: 20px;
+}
+
+.primer-parrafo {
+  color: white;
+}
+
+.segundo-parrafo {
+  color: white;
+}
+
+.descripcion1 {
+  font-size: 24px;
+  color: darkolivegreen;
+}
+
+.descripcion2 {
+  font-size: 24px;
+  color: darkolivegreen;
+}
+
+.almuerzo {
+  font-size: 24px;
+  color: darkolivegreen;
+}
+
+.cena {
+  font-size: 24px;
+  color: darkolivegreen;
+}
+
+.imagen-centrada {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 650px; /* Ajusta el tamaño  */
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Ajusta el ancho del carrusel */
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-images .images {
+  display: flex;
+  width: 300%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+  width: 100%;
+  flex: 1;
+  object-fit: cover;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.controls {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.control-btn {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input#slide1:checked ~ .images {
+  transform: translateX(0%);
+}
+input#slide2:checked ~ .images {
+  transform: translateX(-100%);
+}
+input#slide3:checked ~ .images {
+  transform: translateX(-200%);
+}
+
+.carousel-images {
+  display: flex;
+  width: 300%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images .images {
+  display: flex;
+  width: 100%;
+}
+
+.carousel-images img {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+input#slide1:checked ~ .carousel-images .images {
+  transform: translateX(0%);
+}
+input#slide2:checked ~ .carousel-images .images {
+  transform: translateX(-100%);
+}
+input#slide3:checked ~ .carousel-images .images {
+  transform: translateX(-200%);
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-images .images {
+  display: flex;
+  width: 300%;
+  animation: carruselAnimado 9s infinite ease-in-out;
+}
+
+.carousel-images img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+@keyframes carruselAnimado {
+  0% {
+    transform: translateX(0%);
+  }
+  33% {
+    transform: translateX(-100%);
+  }
+  66% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu li {
+    margin: 10px 0;
+  }
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: black; /* Color de fondo */
+}
+
+/* Contenedor del menú */
+.header {
+  background: #092327;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Contenedor para organizar el logo y los apartados */
+.menu-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1000px;
+}
+
+/* Estilos del logo */
+.titulo-principal {
+  color: white;
+  font-size: 64px;
+  text-align: center;
+  flex-grow: 1; /* Para que el logo ocupe espacio en el centro */
+}
+
+/* Estilos del menú */
+.menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 400px;
+}
+
+.menu li {
+  margin: 20px 15px;
+  position: relative;
+  top: 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.menu li a:hover {
+  background: red;
+  color: white; /* Asegura buena legibilidad en el hover */
+}
+
+/* Contenedor principal */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Espaciado uniforme */
+  align-items: center; /* Alineación vertical */
+  background-color: black; /* Asegura que el fondo sea negro */
+  padding: 10px 50px; /* Espaciado interno */
+}
+
+/* Listas de menú */
+.menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 30px; /* Ajusta la separación entre los elementos */
+}
+
+/* Elementos del menú */
+.menu li a {
+  text-decoration: none;
+  color: white; /* Ajusta el color según tu diseño */
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Título central */
+.titulo-principal {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  flex-grow: 1; /* Permite que el título tome espacio en el centro */
+}
+
+header div {
+  display: flex;
+  justify-content: center;
+}
+
+/*estilos del menu */
+
+/* General body styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Menu header styles */
+.menu-header {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.menu-title {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.menu-description {
+  font-size: 1.2em;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Image gallery styles */
+.menu-images {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las imágenes se ajusten automáticamente */
+  justify-content: space-between; /* Añade espacio entre las imágenes */
+  width: 80%; /* Controla el tamaño total de la galería */
+}
+
+.image-gallery img {
+  width: 48%; /* Esto hace que las imágenes se ajusten en 2 por fila */
+  margin-bottom: 20px; /* Espacio entre filas */
+  border-radius: 8px; /* Borde redondeado en las imágenes (opcional) */
+  object-fit: cover; /* Asegura que las imágenes se ajusten sin distorsionarse */
+  height: 180px; /* Define una altura fija para todas las imágenes */
+  box-sizing: border-box; /* Asegura que el padding y el margen se incluyan en el tamaño total */
+}
+
+/* Asegurarse de que no haya desbordamientos o problemas de alineación */
+.image-gallery img:nth-child(odd) {
+  margin-right: 2%; /* Añadir un pequeño margen entre las imágenes de la fila */
+}
+
+.image-gallery img:nth-child(even) {
+  margin-left: 2%; /* Añadir un pequeño margen entre las imágenes de la fila */
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+article {
+  margin-bottom: 20px; /* Espacio adicional entre secciones */
+  padding: 10px; /* Asegura que haya espacio alrededor del contenido */
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido */
+}
+article {
+  margin: 20px;
+  text-align: center;
+}
+
+/* Contenedor principal de la galería */
+.menu-images {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Contenedor de las imágenes */
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1200px; /* Para evitar que se extienda demasiado */
+}
+
+/* Estilo para las imágenes */
+.image-gallery img {
+  width: 48%; /* Dos imágenes por fila */
+  height: 200px; /* Mantiene una altura uniforme */
+  object-fit: contain; /* Asegura que la imagen se recorte sin deformarse */
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+/* Ajuste de márgenes para mantener uniformidad */
+.image-gallery img:nth-child(odd) {
+  margin-right: 2%;
+}
+
+.image-gallery img:nth-child(even) {
+  margin-left: 2%;
+}
+
+/* Elimina reglas conflictivas */
+img {
+  max-width: 100%;
+  height: auto;
+}
+.image-gallery img {
+  max-width: 48%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+/* Asegúrate de que el archivo CSS esté bien referenciado en tu HTML */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #111; /* Fondo oscuro para la página */
+  color: white; /* Texto blanco por defecto */
+}
+
+.empresa {
+  background-color: black; /* Fondo negro */
+  color: white; /* Texto blanco */
+  font-family: Arial, Helvetica, sans-serif; /* Fuente fina */
+  font-size: 30px; /* Tamaño de letra más grande */
+  line-height: 1.6; /* Espaciado entre líneas */
+  padding: 20px; /* Espaciado interno */
+  max-width: 800px;
+  margin: 0 auto; /* Centrado del contenido */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.empresa h2 {
+  font-size: 50px; /* Tamaño más grande para el título */
+  font-weight: lighter; /* Peso de la fuente fina */
+}
+
+h3,
+.descripcion2 {
+  font-size: 24px; /* Ajusta el tamaño según prefieras */
+  color: darkolivegreen; /* Verde brillante */
+}
+
+p.descripcion2 {
+  font-size: 20px; /* Tamaño de fuente para los párrafos */
+  color: darkolivegreen; /* Verde brillante */
+}
+
+.descripcion-texto3 {
+  font-size: 35px;
+  color: darkolivegreen;
+}
+
+.descripcion-texto2 {
+  font-size: 35px;
+  color: darkolivegreen;
+}
+.descripcion-texto1 {
+  font-size: 35px;
+  color: darkolivegreen;
+}
+
+.empresa-description {
+  font-size: 20px;
+  text-align: justify;
+  max-width: 800px;
+  margin: auto;
+}
+
+.empresa-gallery img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 30px auto;
+  border-radius: 10px;
+}
+.empresa-header {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <style>
+      body {
+        background-color: #2f2f2f;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 25px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #333;
+        z-index: 1000;
+        box-sizing: border-box;
+      }
+
+      .nav-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+        font-size: 20px;
+      }
+
+      .nav-links a:hover {
+        color: #ff5733;
+      }
+
+      .center {
+        flex-grow: 1;
+        text-align: center;
+        font-size: 45px;
+      }
+
+      main {
+        padding-top: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+
+      .empresa-content {
+        max-width: 900px;
+        width: 90%;
+        text-align: justify;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+        
+        
+      }
+
+      .empresa-description {
+        font-size: 22px;
+        line-height: 1.7;
+        margin-bottom: 30px;
+      }
+
+      /* Galería de imágenes al costado */
+      .empresa-gallery-flex {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+      }
+
+      .imagen-grande {
+        width: 500px;
+        border-radius: 10px;
+      }
+
+      .imagenes-secundarias {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .imagen-pequena {
+        width: 240px;
+        border-radius: 10px;
+      }
+
+      footer {
+        margin-top: 50px;
+        font-size: 16px;
+        color: #aaa;
+        text-align: center;
+      }
+
+      @media screen and (max-width: 768px) {
+        .empresa-gallery-flex {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .imagen-grande,
+        .imagen-pequena {
+          width: 100%;
+          max-width: 90vw;
+        }
+
+        .imagenes-secundarias {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+      .imagen-pequena {
+        width: 355px !important;
+        max-height: 355px !important;
+        height: auto !important;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+
+  <body class="menu">
+    <header>
+      <div class="nav-links">
+        <a href="./index.html" class="left1">HOME</a>
+        <a href="./empresa.html" class="left2">EMPRESA</a>
+        <span class="center">VELLUTO</span>
+        <a href="./contac.html" class="right1">CONTACTO</a>
+        <a href="./galeria.html" class="right2">GALERIA</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="empresa-content">
+        <section class="empresa-header">
+          <p class="empresa-description">
+            Velluto es un restaurante innovador y sofisticado que se distingue
+            por su ambiente acogedor y su atención personalizada. Ofrecemos una
+            experiencia culinaria única, con una selección de platos
+            cuidadosamente elaborados que fusionan sabores tradicionales con
+            toques modernos. Nuestro compromiso con la calidad y el servicio
+            excepcional nos convierte en el lugar ideal para disfrutar de una
+            comida especial, ya sea en una cena íntima o en una celebración con
+            amigos y familiares. En Velluto, cada detalle está pensado para que
+            nuestros clientes vivan una experiencia memorable.
+          </p>
+        </section>
+
+        <section class="empresa-gallery-flex">
+          <img
+            src="./asssets/assets2/empresa2.jpg"
+            alt="empresa principal"
+            class="imagen-grande"
+          />
+          <div class="imagenes-secundarias">
+            <img
+              src="./asssets/assets2/empresa3.jpg"
+              alt="Imagen secundaria 1"
+              class="imagen-pequena"
+            />
+            <img
+              src="./asssets/assets2/empresafinal.jpg"
+              alt="Imagen secundaria 2"
+              class="imagen-pequena"
+            />
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>Marca registrada por Velluto</footer>
+  </body>
+</html>
