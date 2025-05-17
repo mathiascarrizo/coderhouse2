@@ -698,8 +698,7 @@ body.contacto main {
   order: 2;
   margin-left: -10px; /* Mueve GALERIA
    más cerca de HOME */
-   transform: translateX(-50%);
-
+  transform: translateX(-50%);
 }
 .nav-links a {
   padding: 10px 15px;
@@ -1447,15 +1446,17 @@ header {
 
 .right1,
 .right2 {
-  margin-left: 18px;  /* Ajuste de margen para el primer botón */
-
+  margin-left: 18px; /* Ajuste de margen para el primer botón */
 }
 .right2 {
   margin-left: 10px; /* O cualquier valor para mantener la separación */
-  transform: translateX(-30px); /* Desplaza el botón ligeramente hacia la izquierda */}
-  .right1 {
-    transform: translateX(-70px); /* Desplaza el botón hacia la izquierda */
-  }
+  transform: translateX(
+    -30px
+  ); /* Desplaza el botón ligeramente hacia la izquierda */
+}
+.right1 {
+  transform: translateX(-70px); /* Desplaza el botón hacia la izquierda */
+}
 .right-group {
   display: flex;
   gap: 12px;
@@ -1588,4 +1589,27 @@ section {
 }
 body.menu .center {
   margin-left: 10px; /* Ajustá el valor según lo que necesites */
+}
+/*agregado de menu para vista en celulares (sino funcuiona sacarlo)*/
+/* En escritorio: menú horizontal (ya lo tienes) */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-direction: row; /* aseguramos que sea horizontal */
+}
+
+/* En móvil: menú vertical */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;  /* vertical: una opción debajo de otra */
+    gap: 10px;               /* menos espacio entre opciones */
+    align-items: center;     /* centramos las opciones */
+  }
+
+  .nav-links a {
+    width: 100%;             /* que el enlace ocupe todo el ancho disponible */
+    padding: 15px 0;         /* más espacio arriba y abajo para facilitar click */
+    font-size: 24px;         /* opcional: aumentar un poco el texto en móvil */
+  }
 }
