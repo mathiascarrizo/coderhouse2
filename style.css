@@ -1614,28 +1614,67 @@ body.menu .center {
   }
 }
 /*nuevos ajustes !!!!!!!!!!!!!!!!!!!!! */
-/* SOLO para el menú del inicio */
-.menu-inicio {
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
+/* Menú fijo arriba solo en el inicio */
+.header-inicio {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black;
+  z-index: 999;
+  text-align: center;
+  padding: 10px 0;
 }
 
-@media screen and (max-width: 768px) {
+/* Ajustar el espacio para que el carrusel no quede tapado */
+body {
+  margin: 0;
+  padding-top: 220px; /* Aumentá o reducí según el alto real del header */
+}
+
+/* Estilo general del menú del inicio */
+.menu-inicio {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Enlaces dentro del menú */
+.menu-inicio li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1em;
+  padding: 6px 0;
+  display: block;
+}
+
+/* Estilo del título VELLUTO dentro del ul */
+.menu-inicio .titulo-principal {
+  font-size: 2em;
+  color: white;
+  margin: 6px 0;
+  padding: 0;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Opcional: Para pantallas grandes, volver a horizontal */
+@media screen and (min-width: 769px) {
   .menu-inicio {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 0;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
   }
 
-  .menu-inicio li a {
-    font-size: 1.1em;
-    padding: 8px 12px;
+  .menu-inicio .titulo-principal {
+    font-size: 1.8em;
+    padding: 0 15px;
   }
 
-  .titulo-principal {
-    font-size: 2em;
-    margin: 10px 0;
+  body {
+    padding-top: 120px;
   }
 }
