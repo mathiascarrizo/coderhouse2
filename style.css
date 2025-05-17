@@ -1614,24 +1614,25 @@ body.menu .center {
   }
 }
 /*nuevos ajustes !!!!!!!!!!!!!!!!!!!!! */
-/* Menú fijo arriba solo en el inicio */
+/* 🟡 Header fijo arriba */
 .header-inicio {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   background-color: black;
-  z-index: 999;
+  z-index: 1000;
   text-align: center;
   padding: 10px 0;
 }
 
-/* Ajustar el espacio para que el carrusel no quede tapado */
+/* 🟡 Espacio para que el carrusel no quede oculto */
 body {
+  padding-top: 220px; /* Ajustalo según el alto real del header */
   margin: 0;
-  padding-top: 220px; /* Aumentá o reducí según el alto real del header */
 }
 
-/* Estilo general del menú del inicio */
+/* 🟢 Estilo del menú SOLO en el INICIO */
 .menu-inicio {
   list-style: none;
   padding: 0;
@@ -1639,42 +1640,40 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
-/* Enlaces dentro del menú */
+/* 🟢 Enlaces del menú */
 .menu-inicio li a {
   text-decoration: none;
   color: white;
-  font-size: 1.1em;
-  padding: 6px 0;
-  display: block;
+  font-size: 1.2em;
+  padding: 4px 0;
 }
 
-/* Estilo del título VELLUTO dentro del ul */
+/* 🟢 Título VELLUTO centrado */
 .menu-inicio .titulo-principal {
-  font-size: 2em;
   color: white;
+  font-size: 2.3em;
+  font-weight: bold;
   margin: 6px 0;
-  padding: 0;
   text-align: center;
-  line-height: 1.2;
 }
 
-/* Opcional: Para pantallas grandes, volver a horizontal */
-@media screen and (min-width: 769px) {
+/* 🔵 Para pantallas más grandes (horizontal opcional) */
+@media screen and (min-width: 768px) {
   .menu-inicio {
     flex-direction: row;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
   }
 
   .menu-inicio .titulo-principal {
-    font-size: 1.8em;
-    padding: 0 15px;
+    font-size: 2em;
+    padding: 0 20px;
   }
 
   body {
-    padding-top: 120px;
+    padding-top: 130px;
   }
 }
