@@ -1615,66 +1615,60 @@ body.menu .center {
 }
 /*nuevos ajustes !!!!!!!!!!!!!!!!!!!!! */
 /* 🟡 Header sticky arriba (se queda en la parte superior solo cuando haces scroll) */
+/* Contenedor header sin posición fija */
 .header-inicio {
-  position: sticky;
-  top: 0;
-  left: 0;
   width: 100%;
   background-color: black;
-  z-index: 1000;
-  text-align: center;
   padding: 10px 0;
+  text-align: center;
 }
 
-/* 🟡 Espacio pequeño para que el carrusel no quede oculto */
-body {
-  padding-top: 60px; /* poco espacio porque header no está fijo todo el tiempo */
-  margin: 0;
-}
-
-/* 🟢 Estilo del menú SOLO en el INICIO */
+/* Menú vertical en móviles */
 .menu-inicio {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column; /* vertical, uno debajo de otro */
+  flex-direction: column; /* vertical */
   align-items: center;
-  gap: 4px; /* espacio muy pequeño entre items */
+  gap: 4px; /* poco espacio */
 }
 
-/* 🟢 Enlaces del menú */
+/* Links menú */
 .menu-inicio li a {
-  text-decoration: none;
   color: white;
   font-size: 1.2em;
-  padding: 4px 0;
+  text-decoration: none;
+  padding: 6px 0;
   display: block;
+  text-align: center;
+  width: 100%;
 }
 
-/* 🟢 Título VELLUTO centrado */
+/* Título VELLUTO centrado, más grande */
 .menu-inicio .titulo-principal {
   color: white;
-  font-size: 2.3em;
+  font-size: 2.5em;
   font-weight: bold;
-  margin: 6px 0;
+  margin: 10px 0;
   text-align: center;
 }
 
-/* 🔵 En pantallas más grandes, menú horizontal y centrado */
-@media screen and (min-width: 768px) {
+/* En pantallas grandes, menú horizontal y centrado con VELLUTO en medio */
+@media (min-width: 768px) {
   .menu-inicio {
     flex-direction: row;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
   }
 
   .menu-inicio .titulo-principal {
     font-size: 2em;
-    padding: 0 20px;
+    margin: 0 20px;
   }
 
-  body {
-    padding-top: 60px;
+  .menu-inicio li a {
+    width: auto;
+    padding: 0 8px;
   }
 }
