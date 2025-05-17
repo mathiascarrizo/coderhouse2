@@ -1613,3 +1613,37 @@ body.menu .center {
     font-size: 24px;         /* opcional: aumentar un poco el texto en móvil */
   }
 }
+/*nuevos ajustes !!!!!!!!!!!!!!!!!!!!! */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;  /* Que ocupe todo el ancho */
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 24px;
+    display: block !important; /* Asegura que no esté oculto */
+  }
+
+  /* Asegurar que todos los links con clases específicas estén visibles */
+  .nav-links .left1,
+  .nav-links .left2,
+  .nav-links .center,
+  .nav-links .right1,
+  .nav-links .right2 {
+    display: block !important;
+    width: 100%;  /* Que también ocupen todo el ancho */
+    text-align: center;
+  }
+
+  /* Ajustar header para móvil si es necesario */
+  header {
+    height: auto;  /* Que crezca si necesita más alto */
+    padding: 10px 20px;
+    flex-direction: column;
+  }
+}
