@@ -1617,47 +1617,53 @@ body.menu .center {
 @media (max-width: 768px) {
   .nav-links {
     flex-direction: column;
-    gap: 6px;
+    gap: 3px;                     /* mínimo espacio entre opciones */
     align-items: center;
-    width: 250px;          /* ancho compacto pero no mínimo */
-    margin: 0 auto 16px;   /* centrado y más margen abajo para separar del carrusel */
-    padding: 0 12px;
+    width: auto !important;
+    max-width: 200px !important; /* ancho bien compacto */
+    margin: 0 auto 10px !important;
+    padding: 0 6px !important;
   }
 
   .nav-links a {
-    width: 100%;
-    padding: 8px 12px;     /* padding cómodo */
-    font-size: 17px;       /* tamaño de fuente legible pero no grande */
-    line-height: 1.3;
-    display: block !important;
+    width: auto !important;
+    max-width: 180px !important;
+    padding: 3px 8px !important;  /* padding muy ajustado */
+    font-size: 14px !important;   /* tamaño pequeño pero legible */
+    line-height: 1.1 !important;  /* línea bien compacta */
+    display: inline-block !important;
     box-sizing: border-box;
+    text-align: center;
+    white-space: nowrap;          /* evitar que el texto se divida en dos líneas */
   }
 
-  /* Secciones especiales del menú */
+  /* Igual para secciones especiales */
   .nav-links .left1,
   .nav-links .left2,
   .nav-links .center,
   .nav-links .right1,
   .nav-links .right2 {
-    display: block !important;
-    width: 100%;
+    display: inline-block !important;
+    width: auto !important;
+    max-width: 180px !important;
+    padding: 3px 8px !important;
+    font-size: 14px !important;
+    line-height: 1.1 !important;
     text-align: center;
-    padding: 8px 12px;
-    font-size: 17px;
-    line-height: 1.3;
+    white-space: nowrap;
   }
 
   header {
-    height: auto;
-    padding: 10px 20px;
-    flex-direction: column;
+    height: auto !important;
+    padding: 6px 12px !important;
+    flex-direction: column !important;
   }
 
   main {
-    margin-top: 90px;      /* ajusta el margen para que el contenido no quede pegado */
+    margin-top: 90px !important;
   }
 
-  /* Esto asegura que el carrusel use todo el ancho posible */
+  /* Carrusel */
   .carousel-container, .carousel, .carousel img {
     width: 100% !important;
     max-width: none !important;
