@@ -1672,3 +1672,8 @@ body.menu .center {
     padding: 0 8px;
   }
 }
+.menu-inicio li:nth-child(1) { order: 1; }
+.menu-inicio li:nth-child(2) { order: 2; }
+.menu-inicio li:nth-child(3) { order: 3; }
+.menu-inicio li:nth-child(4) { order: 4; }
+.menu-inicio li:nth-child(5) { order: 5; }
