@@ -1615,55 +1615,55 @@ body.menu .center {
 }
 /*nuevos ajustes !!!!!!!!!!!!!!!!!!!!! */
 @media (max-width: 768px) {
+  header {
+    height: auto !important;
+    padding: 4px 8px !important;       /* menos padding para el header */
+    flex-direction: column !important;
+  }
+
   .nav-links {
-    flex-direction: column;
-    gap: 3px;                     /* mínimo espacio entre opciones */
-    align-items: center;
+    flex-direction: column !important;
+    gap: 3px !important;                /* menos espacio entre enlaces */
+    align-items: center !important;
     width: auto !important;
-    max-width: 200px !important; /* ancho bien compacto */
-    margin: 0 auto 10px !important;
-    padding: 0 6px !important;
+    max-width: 220px !important;
+    margin: 5px auto !important;       /* menos margen vertical */
+    padding: 0 5px !important;
   }
 
   .nav-links a {
-    width: auto !important;
-    max-width: 180px !important;
-    padding: 3px 8px !important;  /* padding muy ajustado */
-    font-size: 14px !important;   /* tamaño pequeño pero legible */
-    line-height: 1.1 !important;  /* línea bien compacta */
-    display: inline-block !important;
-    box-sizing: border-box;
-    text-align: center;
-    white-space: nowrap;          /* evitar que el texto se divida en dos líneas */
+    width: 100% !important;
+    max-width: none !important;
+    padding: 2px 10px !important;      /* menos padding vertical */
+    font-size: 14px !important;        /* texto un poco más pequeño */
+    line-height: 1 !important;
+    white-space: normal !important;
+    display: block !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
   }
 
-  /* Igual para secciones especiales */
+  /* Elementos especiales */
   .nav-links .left1,
   .nav-links .left2,
   .nav-links .center,
   .nav-links .right1,
   .nav-links .right2 {
-    display: inline-block !important;
-    width: auto !important;
-    max-width: 180px !important;
-    padding: 3px 8px !important;
-    font-size: 14px !important;
-    line-height: 1.1 !important;
-    text-align: center;
-    white-space: nowrap;
-  }
-
-  header {
-    height: auto !important;
-    padding: 6px 12px !important;
-    flex-direction: column !important;
+    width: 100% !important;
+    max-width: none !important;
+    padding: 0 !important;            /* quitar padding para que sea más compacto */
+    font-size: 16px !important;
+    line-height: 1 !important;
+    white-space: normal !important;
+    display: block !important;
+    text-align: center !important;
   }
 
   main {
-    margin-top: 90px !important;
+    margin-top: 80px !important;       /* espacio suficiente para el header */
   }
 
-  /* Carrusel */
+  /* Carrusel no se toca */
   .carousel-container, .carousel, .carousel img {
     width: 100% !important;
     max-width: none !important;
