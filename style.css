@@ -1617,33 +1617,41 @@ body.menu .center {
 @media (max-width: 768px) {
   .nav-links {
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;             /* menos espacio entre opciones */
     align-items: center;
-    width: 100%;  /* Que ocupe todo el ancho */
+    width: auto;          /* que no ocupe todo el ancho */
+    max-width: 300px;     /* ancho máximo más pequeño para el menú */
+    margin: 0 auto 10px;  /* centrado y un poco de margen abajo */
   }
 
   .nav-links a {
-    width: 100%;
-    padding: 15px 0;
-    font-size: 24px;
-    display: block !important; /* Asegura que no esté oculto */
+    width: 100%;          /* que el enlace ocupe todo el ancho del menú */
+    padding: 8px 0;       /* menos padding vertical */
+    font-size: 18px;      /* texto un poco más chico para que quede más compacto */
+    display: block !important;
+    box-sizing: border-box;
   }
 
-  /* Asegurar que todos los links con clases específicas estén visibles */
+  /* Asegurar que las secciones especiales del menú se vean también */
   .nav-links .left1,
   .nav-links .left2,
   .nav-links .center,
   .nav-links .right1,
   .nav-links .right2 {
     display: block !important;
-    width: 100%;  /* Que también ocupen todo el ancho */
+    width: 100%;
     text-align: center;
+    padding: 6px 0;
+    font-size: 18px;
   }
 
-  /* Ajustar header para móvil si es necesario */
   header {
-    height: auto;  /* Que crezca si necesita más alto */
+    height: auto;          /* que el header crezca si necesita */
     padding: 10px 20px;
     flex-direction: column;
+  }
+
+  main {
+    margin-top: 110px;     /* ajusta el margen para que el contenido quede bien debajo */
   }
 }
