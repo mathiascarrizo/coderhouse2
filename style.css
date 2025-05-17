@@ -1614,57 +1614,28 @@ body.menu .center {
   }
 }
 /*nuevos ajustes !!!!!!!!!!!!!!!!!!!!! */
-@media (max-width: 768px) {
-  header {
-    height: auto !important;
-    padding: 4px 8px !important;       /* menos padding para el header */
-    flex-direction: column !important;
-  }
-
-  .nav-links {
-  display: flex; /* o grid */
+/* SOLO para el menú del inicio */
+.menu-inicio {
   flex-direction: column;
-  gap: 0px !important;  /* espacio muy pequeño entre elementos */ 
-  margin: 5px auto !important; /* margen general arriba y abajo */
-  padding: 0;
+  align-items: center;
+  gap: 15px;
 }
 
-  .nav-links a {
-    width: 100% !important;
-    max-width: none !important;
-    padding: 2px 10px !important;      /* menos padding vertical */
-    font-size: 14px !important;        /* texto un poco más pequeño */
-    line-height: 1 !important;
-    white-space: normal !important;
-    display: block !important;
-    box-sizing: border-box !important;
-    text-align: center !important;
+@media screen and (max-width: 768px) {
+  .menu-inicio {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
   }
 
-  /* Elementos especiales */
-  .nav-links .left1,
-  .nav-links .left2,
-  .nav-links .center,
-  .nav-links .right1,
-  .nav-links .right2 {
-    width: 100% !important;
-    max-width: none !important;
-    padding: 0 !important;            /* quitar padding para que sea más compacto */
-    font-size: 16px !important;
-    line-height: 1 !important;
-    white-space: normal !important;
-    display: block !important;
-    text-align: center !important;
+  .menu-inicio li a {
+    font-size: 1.1em;
+    padding: 8px 12px;
   }
 
-  main {
-    margin-top: 80px !important;       /* espacio suficiente para el header */
-  }
-
-  /* Carrusel no se toca */
-  .carousel-container, .carousel, .carousel img {
-    width: 100% !important;
-    max-width: none !important;
-    height: auto !important;
+  .titulo-principal {
+    font-size: 2em;
+    margin: 10px 0;
   }
 }
