@@ -1489,62 +1489,91 @@ header {
 
 /* Ajustes para móviles */
 @media (max-width: 768px) {
-   body {
-    padding-top: 40px; /* espacio para la barra de navegación más chica */
-  }
   header {
     height: auto;
-    padding: 10px 15px; /* menos padding para ahorrar espacio arriba */
+    padding: 10px 15px;
   }
+
   nav {
     margin: 0 !important;
     padding: 0 !important;
+    background-color: #222; /* o el color que uses para que el menú se vea */
+    position: relative;      /* para mantener el orden visual */
+    z-index: 10;
   }
 
-
   .menu-inicio {
+    display: flex;
     flex-direction: column;
-    gap: 6px;  /* reducí gap de 15px a 6px para que quede más compacto */
+    gap: 0 !important;       /* sin espacios entre los items */
     max-width: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-inicio li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu-inicio a {
+    padding: 4px 0 !important; /* poco padding vertical */
+    margin: 0 !important;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;        /* centrado para que se vean mejor */
+    line-height: 1 !important; /* línea ajustada para compactar */
+    color: white;              /* que se vean las palabras */
+    display: block;
+    white-space: nowrap;       /* evitar cortes */
   }
 
   .titulo-principal {
     position: static;
     transform: none;
     font-size: 24px;
-    margin: 8px 0;  /* un poquito menos de margen */
+    margin: 0 !important;      /* sin margen */
+    padding: 4px 0 !important;
+    font-weight: bold;
   }
 
   .nav-links {
-  display: flex;
-  flex-direction: column;
-  gap: 4px !important; /* espacio pequeño entre ítems */
-  padding: 0 !important;
-  margin: 0 !important;
-}
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 0 !important;
+  }
 
   .nav-links a {
-  padding-top: 2px !important;
-  padding-bottom: 2px !important;
-  margin: 0 !important;           /* asegurá que no haya margen */
-  line-height: 1 !important;      /* para que no haya espacio extra entre líneas */
-}
-    .nav-links .center {
-    font-size: 16px !important;
-    font-weight: normal !important;
-    margin: 0 !important;
     padding: 1px 5px !important;
-    line-height: 0.8 !important;
+    margin: 0 !important;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    line-height: 1 !important;
   }
+
   nav, header {
-  margin: 0 !important;
-  padding: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Separación para que el carrusel no quede pegado al menú */
+  .carousel {
+    margin-top: 10px;
+    height: 350px;      /* carrusel grande en celular */
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
-.nav-links li {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-}
+
+
+
 
 
 
