@@ -344,6 +344,27 @@ header {
   .nav-links a {
     padding: 10px;
   }
+  nav {
+  margin-bottom: 10px; /* reduce espacio debajo del nav */
+}
+
+.nav-links {
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+
+.nav-links a {
+  padding: 6px 10px;
+}
+
+header {
+  padding: 5px; /* menos padding en mobile */
+}
+}
+.carousel-container {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 /* Menu header styles */
@@ -1454,13 +1475,13 @@ header {
   font-weight: bold;
   font-size: 28px;
   color: white;
-  padding: 18px 15px;
-  pointer-events: none; /* para que no sea clickeable */
-  position: absolute;
-  left: 50%;
-  transform: translateX(-40%);
-    margin: -30px; /* <-- este es clave */
-
+  padding: 10px 20px;
+  pointer-events: none;
+  margin: 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Ajustes para móviles */
