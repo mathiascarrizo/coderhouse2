@@ -128,7 +128,7 @@ section h2 {
 }
 
 .carrusel {
-  width: 100vw;  /* usa todo el ancho de la pantalla */
+  width: 100vw; /* usa todo el ancho de la pantalla */
   margin: 0;
   padding: 0;
   overflow: hidden; /* para evitar que se desborde si algo se sale */
@@ -177,8 +177,8 @@ input#slide3:checked ~ .images {
 }
 
 .carousel-images {
-  width: 100vw;      /* Usa todo el ancho de la pantalla */
-  overflow: hidden;  /* Oculta lo que se sale */
+  width: 100vw; /* Usa todo el ancho de la pantalla */
+  overflow: hidden; /* Oculta lo que se sale */
   margin: 0;
   padding: 0;
 }
@@ -345,22 +345,22 @@ header {
     padding: 10px;
   }
   nav {
-  margin-bottom: 10px; /* reduce espacio debajo del nav */
-}
+    margin-bottom: 10px; /* reduce espacio debajo del nav */
+  }
 
-.nav-links {
-  margin: 0;
-  padding: 0;
-  gap: 10px;
-}
+  .nav-links {
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+  }
 
-.nav-links a {
-  padding: 6px 10px;
-}
+  .nav-links a {
+    padding: 6px 10px;
+  }
 
-header {
-  padding: 5px; /* menos padding en mobile */
-}
+  header {
+    padding: 5px; /* menos padding en mobile */
+  }
 }
 .carousel-container {
   margin-top: 0;
