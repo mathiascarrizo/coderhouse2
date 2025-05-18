@@ -2,7 +2,7 @@
 
 * {
   box-sizing: border-box;
-  margin: 0;
+  margin: 0px;
   padding: 0;
 }
 p {
@@ -1492,21 +1492,30 @@ body.index .nav-links .right2 {
 }
 
 main {
-  margin-top: 120px; /* Deja suficiente espacio para la barra de navegación */
+  margin-top: 20px; /* Deja suficiente espacio para la barra de navegación */
 }
 
 .menu-images {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* dos columnas */
-  gap: 30px; /* ajusta el espaciado entre las imágenes */
-  padding: 40px;
-  justify-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0;
+  gap: 0;
+  justify-items: stretch; /* para que las imágenes ocupen todo el ancho posible */
 }
 
 .menu-item {
-  text-align: center;
-  max-width: 550px; /* Mayor tamaño de los contenedores */
+  margin: 0;
+  padding: 0;
+}
+
+.menu-img {
   width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 0; /* saca el borde para probar */
+  margin: 0;
+  padding: 0;
+  display: block;
 }
 
 .menu-main-title {
@@ -1516,12 +1525,6 @@ main {
   color: white;
 }
 
-.menu-img {
-  width: 100%;
-  height: 400px; /* Aumento del tamaño de las imágenes */
-  object-fit: cover;
-  border-radius: 8px;
-}
 
 .menu-link {
   display: inline-block;
@@ -1599,19 +1602,45 @@ body.menu .center {
   flex-direction: row; /* aseguramos que sea horizontal */
 }
 
+/* Evitar superposición contenido debajo del header fijo en todos los tamaños */
+main, .galeria, .carousel-container {
+  margin-top: 70px; /* Ajusta según altura header */
+}
+
+/* Estilos generales para el menú (desktop) */
+.nav-links {
+  display: flex;
+  flex-direction: row; /* menú horizontal en desktop */
+  align-items: center;
+  gap: 20px;
+}
 /* En móvil: menú vertical */
 @media (max-width: 768px) {
+  /* Asegurar orden correcto (aunque el HTML ya está bien) */
   .nav-links {
-    flex-direction: column;  /* vertical: una opción debajo de otra */
-    gap: 10px;               /* menos espacio entre opciones */
-    align-items: center;     /* centramos las opciones */
+    flex-direction: column;  /* menú vertical en móvil */
+    align-items: center;
+    gap: 10px;
   }
 
   .nav-links a {
-    width: 100%;             /* que el enlace ocupe todo el ancho disponible */
-    padding: 15px 0;         /* más espacio arriba y abajo para facilitar click */
-    font-size: 24px;         /* opcional: aumentar un poco el texto en móvil */
+    width: 100%;
+    padding: 15px 0;
+    font-size: 24px;
+    text-align: center;
   }
+
+  /* Evita que la lista cambie el orden si usas order */
+  .menu-inicio li {
+    order: initial;
+  }
+
+.menu-inicio li:nth-child(1) { order: 1; }
+.menu-inicio li:nth-child(2) { order: 2; }
+.menu-inicio li:nth-child(3) { order: 3; }
+.menu-inicio li:nth-child(4) { order: 4; }
+.menu-inicio li:nth-child(5) { order: 5; }
+ 
 }
 /*nuevos ajustes !!!!!!!!!!!!!!!!!!!!! */
 /* 🟡 Header sticky arriba (se queda en la parte superior solo cuando haces scroll) */
@@ -1705,14 +1734,21 @@ body.menu .center {
     justify-content: center;
     gap: 30px;
   }
+
 }
 /* Ajustes para celulares muy pequeños */
 @media (max-width: 480px) {
   .nav-links a {
     font-size: 18px;
+     main, .carousel-container, .galeria {
+    margin-top: 70px; /* o 80px si quieres un poco más de espacio */
   }
 
   .menu-img {
     height: 250px;
   }
+}
+.titulo-principal {
+  font-size: 1.6em !important;
+}
 }
