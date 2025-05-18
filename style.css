@@ -307,8 +307,8 @@ header {
   font-weight: bold;
   color: white;
   justify-content: center;
-  margin-top: 6px; /* Ajusta el margen superior para mover hacia abajo */
-  margin-bottom: 10px; /* Ajusta el margen inferior para mover hacia arriba */
+  margin-top: -25px; /* Ajusta el margen superior para mover hacia abajo */
+  margin-bottom: 150x; /* Ajusta el margen inferior para mover hacia arriba */
 }
 
 header div {
@@ -601,7 +601,7 @@ p.descripcion2 {
   text-decoration: none;
   color: white; /* Color del texto */
   font-size: 18px;
-  padding: 8px 16px;
+  padding: 8px 50px;
   transition: background-color 0.3s;
   word-wrap: break-word; /* Permite que las palabras largas se dividan */
 }
@@ -1390,13 +1390,13 @@ header {
     /* NO pongas grid-template-rows */
   }
 }
-/* SECCION DE MENU */
+/* Estilos básicos para el body */
 body {
+  margin: 0;
   background-color: #2f2f2f;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 30px;
-  margin: 0;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -1407,348 +1407,81 @@ header {
   width: 100%;
   height: 70px;
   background-color: #333;
-  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
   box-sizing: border-box;
   padding: 0 20px;
 }
 
-.nav-links {
+/* Menú container */
+.menu-inicio {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  gap: 20px; /* espacio entre los enlaces */
+  list-style: none;
+  gap: 57px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 900px; /* opcional para que no sea demasiado ancho */
+  position: relative;
 }
 
-.nav-links a {
-  text-decoration: none;
+/* Cada item del menú */
+.menu-inicio li {
+  margin: 0;
+}
+
+/* Links */
+.menu-inicio a {
   color: white;
-  padding: 10px;
-  font-size: 20px; /* Podés subir más si querés */
-  font-weight: bold; /* Opcional, si querés que se vean más marcadas */
+  text-decoration: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 18px;
+  display: inline-block;
+  transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
+.menu-inicio a:hover {
   color: #ff5733;
 }
 
-.center {
-  flex-grow: 1;
-  text-align: center;
-  font-size: 45px;
-}
-
-.left1,
-.left2 {
-  margin-right: 10px;
-}
-
-.right1,
-.right2 {
-  margin-left: 18px; /* Ajuste de margen para el primer botón */
-}
-.right2 {
-  margin-left: 10px; /* O cualquier valor para mantener la separación */
-  transform: translateX(
-    -30px
-  ); /* Desplaza el botón ligeramente hacia la izquierda */
-}
-.right1 {
-  transform: translateX(-70px); /* Desplaza el botón hacia la izquierda */
-}
-.right-group {
-  display: flex;
-  gap: 12px;
-}
-
-body.menu .nav-links .left1,
-body.menu .nav-links .left2,
-body.menu .nav-links .center,
-body.menu .nav-links .right1,
-body.menu .nav-links .right2 {
-  display: block;
-}
-
-body.index .nav-links .left1,
-body.index .nav-links .left2,
-body.index .nav-links .right1,
-body.index .nav-links .right2 {
-  display: none;
-}
-
-.menu-header {
-  margin-top: 100px;
-}
-
-.menu-title {
-  font-size: 50px;
-}
-
-.menu-description {
-  font-size: 20px;
-  padding: 20px;
+/* Título VELLUTO en el centro */
+.titulo-principal {
+  font-weight: bold;
+  font-size: 28px;
   color: white;
+  padding: 10px 15px;
+  pointer-events: none; /* para que no sea clickeable */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-main {
-  margin-top: 20px; /* Deja suficiente espacio para la barra de navegación */
-}
-
-.menu-images {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 0;
-  gap: 0;
-  justify-items: stretch; /* para que las imágenes ocupen todo el ancho posible */
-}
-
-.menu-item {
-  margin: 0;
-  padding: 0;
-}
-
-.menu-img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 0; /* saca el borde para probar */
-  margin: 0;
-  padding: 0;
-  display: block;
-}
-
-.menu-main-title {
-  font-size: 50px;
-  text-align: center;
-  margin: 0 auto;
-  color: white;
-}
-
-
-.menu-link {
-  display: inline-block;
-  margin-top: 10px;
-  background-color: #444;
-  color: white;
-  padding: 10px 20px; /* Aumenta el tamaño del botón */
-  font-size: 18px; /* Aumenta el tamaño del texto */
-  text-decoration: none;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
-  max-width: 200px; /* Limita el ancho del botón */
-  width: auto; /* Asegura que el tamaño del botón sea relativo al contenido */
-  border-radius: 8px; /* Botón más redondeado */
-}
-
-.menu-link:hover {
-  background-color: #ff5733;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  font-size: 18px;
-  z-index: 999; /* Asegura que el footer quede sobre otros elementos */
-}
-.titulos3 {
-  font-size: 30px; /* Ajusta el tamaño del título como desees */
-}
-
-.segundo-parrafo {
-  font-size: 30px; /* Ajusta el tamaño del párrafo */
-}
-.titulos1 {
-  font-size: 30px; /* Ajusta el tamaño usando unidades relativas */
-}
-
-.primer-parrafo {
-  font-size: 30px; /* Ajusta el tamaño usando unidades relativas */
-}
-.titulos {
-  font-size: 35px; /* Ajusta el tamaño de la palabra "HOME" */
-}
-.titulos1 {
-  margin-bottom: 28px; /* Ajusta el espacio debajo de "Nuestra Historia" */
-}
-
-.titulos3 {
-  margin-top: 28px; /* Ajusta el espacio encima de "Acerca de Nosotros" */
-}
-.servicios-mostrados h1 {
-  margin-top: 40px; /* Ajusta el espacio encima de "Servicios" */
-}
-section {
-  margin-bottom: 30px; /* Ajusta el valor según el espacio que quieras */
-}
-.menu-title {
-  color: white;
-}
-body.menu .center {
-  margin-left: 10px; /* Ajustá el valor según lo que necesites */
-}
-/*agregado de menu para vista en celulares (sino funcuiona sacarlo)*/
-/* En escritorio: menú horizontal (ya lo tienes) */
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-direction: row; /* aseguramos que sea horizontal */
-}
-
-/* Evitar superposición contenido debajo del header fijo en todos los tamaños */
-main, .galeria, .carousel-container {
-  margin-top: 70px; /* Ajusta según altura header */
-}
-
-/* Estilos generales para el menú (desktop) */
-.nav-links {
-  display: flex;
-  flex-direction: row; /* menú horizontal en desktop */
-  align-items: center;
-  gap: 20px;
-}
-/* En móvil: menú vertical */
+/* Ajustes para móviles */
 @media (max-width: 768px) {
-  /* Asegurar orden correcto (aunque el HTML ya está bien) */
-  .nav-links {
-    flex-direction: column;  /* menú vertical en móvil */
-    align-items: center;
-    gap: 10px;
+  header {
+    height: auto;
+    padding: 15px 20px;
   }
-
-  .nav-links a {
-    width: 100%;
-    padding: 15px 0;
+  .menu-inicio {
+    flex-direction: column;
+    gap: 15px;
+    max-width: none;
+  }
+  .titulo-principal {
+    position: static;
+    transform: none;
     font-size: 24px;
-    text-align: center;
-  }
-
-  /* Evita que la lista cambie el orden si usas order */
-  .menu-inicio li {
-    order: initial;
-  }
-
-.menu-inicio li:nth-child(1) { order: 1; }
-.menu-inicio li:nth-child(2) { order: 2; }
-.menu-inicio li:nth-child(3) { order: 3; }
-.menu-inicio li:nth-child(4) { order: 4; }
-.menu-inicio li:nth-child(5) { order: 5; }
- 
-}
-/*nuevos ajustes !!!!!!!!!!!!!!!!!!!!! */
-/* 🟡 Header sticky arriba (se queda en la parte superior solo cuando haces scroll) */
-/* Contenedor header sin posición fija */
-.header-inicio {
-  background-color: black;
-  text-align: center;
-  padding: 10px 0;
-}
-
-/* Contenedor para evitar que el contenido quede debajo */
-.header-placeholder {
-  height: 60px; /* igual a la altura de la barra */
-}
-
-.menu-inicio {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column; /* vertical en móvil */
-  align-items: center;
-  gap: 8px;
-}
-
-.menu-inicio li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.5em;
-  padding: 8px 12px;
-  display: block;
-}
-
-.menu-inicio .titulo-principal {
-  color: white;
-  font-size: 2.5em;
-  font-weight: bold;
-  margin: 10px 0;
-  text-align: center;
-  pointer-events: none;
-}
-
-@media (min-width: 768px) {
-  .menu-inicio {
-    flex-direction: row;
-    justify-content: center;
-    gap: 40px;
-  }
-  .menu-inicio .titulo-principal {
-    font-size: 2em;
-    margin: 0 20px;
+    margin: 10px 0;
   }
 }
-/* Estilo general del menú en móviles */
-.menu-inicio {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-}
 
-/* Asegurar orden correcto (aunque el HTML ya está bien) */
-.menu-inicio li:nth-child(1) { order: 1; }
-.menu-inicio li:nth-child(2) { order: 2; }
-.menu-inicio li:nth-child(3) { order: 3; }
-.menu-inicio li:nth-child(4) { order: 4; }
-.menu-inicio li:nth-child(5) { order: 5; }
-
-/* Ajustes de enlaces */
-.menu-inicio li a {
-  color: white;
-  font-size: 1.2em;
-  text-decoration: none;
-  display: block;
-  padding: 5px;
-}
-
-/* Título VELLUTO */
-.titulo-principal {
-  font-size: 2em;
-  color: white;
-  font-weight: bold;
-  text-align: center;
-  margin: 10px 0;
-}
-
-/* Estilo para escritorio (opcional, para horizontal) */
-@media screen and (min-width: 768px) {
-  .menu-inicio {
-    flex-direction: row;
-    justify-content: center;
-    gap: 30px;
-  }
-
-}
-/* Ajustes para celulares muy pequeños */
-@media (max-width: 480px) {
-  .nav-links a {
-    font-size: 18px;
-     main, .carousel-container, .galeria {
-    margin-top: 70px; /* o 80px si quieres un poco más de espacio */
-  }
-
-  .menu-img {
-    height: 250px;
-  }
-}
-.titulo-principal {
-  font-size: 1.6em !important;
-}
+/* Para evitar que contenido quede tapado por el header */
+main {
+  margin-top: 90px;
 }
