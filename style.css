@@ -1497,18 +1497,19 @@ header {
   nav {
     margin: 0 !important;
     padding: 0 !important;
-    background-color: #222; /* o el color que uses para que el menú se vea */
-    position: relative;      /* para mantener el orden visual */
+    background-color: #222;
+    position: relative;
     z-index: 10;
   }
 
   .menu-inicio {
     display: flex;
     flex-direction: column;
-    gap: 0 !important;       /* sin espacios entre los items */
-    max-width: none;
+    gap: 0 !important;  /* sin espacio entre items */
     padding: 0;
-    margin: 0;
+    margin: 0 0 50px 0;  /* margen solo abajo para separar del carrusel */
+    list-style: none;
+    width: 100%;
   }
 
   .menu-inicio li {
@@ -1517,39 +1518,22 @@ header {
   }
 
   .menu-inicio a {
-    padding: 4px 0 !important; /* poco padding vertical */
+    padding: 1px 0 !important;  /* padding vertical pequeño */
     margin: 0 !important;
-    font-size: 16px;
-    width: 100%;
-    text-align: center;        /* centrado para que se vean mejor */
-    line-height: 1 !important; /* línea ajustada para compactar */
-    color: white;              /* que se vean las palabras */
-    display: block;
-    white-space: nowrap;       /* evitar cortes */
-  }
-
-  .titulo-principal {
-    position: static;
-    transform: none;
-    font-size: 24px;
-    margin: 0 !important;      /* sin margen */
-    padding: 4px 0 !important;
-    font-weight: bold;
-  }
-
-  .nav-links {
-    padding: 0 !important;
-    margin: 0 !important;
-    gap: 0 !important;
-  }
-
-  .nav-links a {
-    padding: 1px 5px !important;
-    margin: 0 !important;
-    font-size: 16px;
+    font-size: 4px;            /* tamaño más pequeño para que no ocupe tanto */
     width: 100%;
     text-align: center;
     line-height: 1 !important;
+    color: white;
+    display: block;
+    white-space: nowrap;
+  }
+
+  .titulo-principal {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 !important;
+    padding: 3px 0 !important;
   }
 
   nav, header {
@@ -1557,10 +1541,9 @@ header {
     padding: 0 !important;
   }
 
-  /* Separación para que el carrusel no quede pegado al menú */
   .carousel {
-    margin-top: 10px;
-    height: 350px;      /* carrusel grande en celular */
+    margin-top: 0;
+    height: 500px;   /* alto decente para móvil */
     width: 100%;
     overflow: hidden;
   }
@@ -1570,7 +1553,29 @@ header {
     height: 100%;
     object-fit: cover;
   }
+  @media (max-width: 768px) {
+  .carousel {
+    height: 600px; /* o el tamaño que quieras */
+  }
 }
+
+@media (min-width: 769px) {
+  .carousel {
+    height: 600px; /* más alto para pantallas grandes */
+  }
+}
+nav, .menu-inicio, header {
+  margin-bottom: 0 !important; /* eliminar margen abajo */
+  padding-bottom: 0 !important; /* eliminar padding abajo */
+  border-bottom: none; /* por si hay algún borde */
+}
+
+.carousel {
+  margin-top: 0 !important;  /* eliminar margen arriba */
+  padding-top: 0 !important; /* eliminar padding arriba */
+}
+}
+
 
 
 
