@@ -1489,10 +1489,18 @@ header {
 
 /* Ajustes para móviles */
 @media (max-width: 768px) {
+   body {
+    padding-top: 40px; /* espacio para la barra de navegación más chica */
+  }
   header {
     height: auto;
     padding: 10px 15px; /* menos padding para ahorrar espacio arriba */
   }
+  nav {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
 
   .menu-inicio {
     flex-direction: column;
@@ -1508,21 +1516,38 @@ header {
   }
 
   .nav-links {
-    padding: 0 !important;  /* eliminar padding extra */
-    margin: 0 !important;   /* eliminar margen extra */
-    gap: 0px !important;    /* asegurá que gap esté presente y sea pequeño */
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 4px !important; /* espacio pequeño entre ítems */
+  padding: 0 !important;
+  margin: 0 !important;
+}
 
   .nav-links a {
-    padding: 1px 5px !important; /* un poco menos de padding que tenías */
-    margin: 0 !important;
-    font-size: 16px;
-    width: 100%;
-    text-align: left;
-      line-height: 0.8 !important; /* reduce altura de línea */
-
-  }
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+  margin: 0 !important;           /* asegurá que no haya margen */
+  line-height: 1 !important;      /* para que no haya espacio extra entre líneas */
 }
+    .nav-links .center {
+    font-size: 16px !important;
+    font-weight: normal !important;
+    margin: 0 !important;
+    padding: 1px 5px !important;
+    line-height: 0.8 !important;
+  }
+  nav, header {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.nav-links li {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+}
+
+
+
 
 /* Para evitar que contenido quede tapado por el header */
 main {
