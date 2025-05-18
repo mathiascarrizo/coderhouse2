@@ -1491,62 +1491,58 @@ header {
 @media (max-width: 768px) {
   header {
     height: auto;
-    padding: 10px 15px;
-    margin: 0;
+    padding: 10px 15px; /* menos padding para ahorrar espacio arriba */
   }
-
   nav {
     margin: 0 !important;
     padding: 0 !important;
   }
 
+
   .menu-inicio {
     flex-direction: column;
-    gap: 6px;
+    gap: 6px;  /* reducí gap de 15px a 6px para que quede más compacto */
     max-width: none;
-    padding: 0;
-    margin: 0;
   }
 
   .titulo-principal {
     position: static;
     transform: none;
     font-size: 24px;
-    margin: 8px 0;
+    margin: -11px 0;  /* un poquito menos de margen */
   }
 
   .nav-links {
-    padding: 0 !important;
-    margin: 0 !important;
-    gap: 0px !important;
+    padding: 0 !important;  /* eliminar padding extra */
+    margin: 0 !important;   /* eliminar margen extra */
+    gap: 0px !important;    /* asegurá que gap esté presente y sea pequeño */
   }
 
   .nav-links a {
-    padding: 5px 10px !important;
+    padding: 1px 5px !important; /* un poco menos de padding que tenías */
     margin: 0 !important;
     font-size: 16px;
     width: 100%;
-    text-align: center;
-    line-height: 1 !important;
-  }
+    text-align: left;
+      line-height: 0.8 !important; /* reduce altura de línea */
 
-  .nav-links .center {
+  }
+    .nav-links .center {
     font-size: 16px !important;
-    font-weight: bold !important;
+    font-weight: normal !important;
     margin: 0 !important;
-    padding: 5px 10px !important;
-    line-height: 1 !important;
+    padding: 1px 5px !important;
+    line-height: 0.8 !important;
   }
-  header,
-  .menu-inicio {
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-
-  .carousel {
-    margin-top: 0;
-  }
+  nav, header {
+  margin: 0 !important;
+  padding: 0 !important;
 }
+}
+
+
+
+
 
 /* Para evitar que contenido quede tapado por el header */
 main {
