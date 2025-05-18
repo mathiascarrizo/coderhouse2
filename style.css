@@ -1491,18 +1491,36 @@ header {
 @media (max-width: 768px) {
   header {
     height: auto;
-    padding: 15px 20px;
+    padding: 10px 15px; /* menos padding para ahorrar espacio arriba */
   }
+
   .menu-inicio {
     flex-direction: column;
-    gap: 15px;
+    gap: 6px;  /* reducí gap de 15px a 6px para que quede más compacto */
     max-width: none;
   }
+
   .titulo-principal {
     position: static;
     transform: none;
     font-size: 24px;
-    margin: 10px 0;
+    margin: 8px 0;  /* un poquito menos de margen */
+  }
+
+  .nav-links {
+    padding: 0 !important;  /* eliminar padding extra */
+    margin: 0 !important;   /* eliminar margen extra */
+    gap: 0px !important;    /* asegurá que gap esté presente y sea pequeño */
+  }
+
+  .nav-links a {
+    padding: 1px 5px !important; /* un poco menos de padding que tenías */
+    margin: 0 !important;
+    font-size: 16px;
+    width: 100%;
+    text-align: left;
+      line-height: 0.8 !important; /* reduce altura de línea */
+
   }
 }
 
