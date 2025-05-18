@@ -1455,7 +1455,7 @@ header {
   font-weight: bold;
   font-size: 28px;
   color: white;
-  padding: 11px 15px;
+  padding: 18px 15px;
   pointer-events: none; /* para que no sea clickeable */
   position: absolute;
   left: 50%;
