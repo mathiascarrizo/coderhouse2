@@ -127,14 +127,12 @@ section h2 {
   width: 650px; /* Ajusta el tamaño  */
 }
 
-.carousel {
-  position: relative;
-  width: 100%;
-  max-width: 800px; /* Ajusta el ancho del carrusel */
-  margin: auto;
-  overflow: hidden;
+.carrusel {
+  width: 100vw;  /* usa todo el ancho de la pantalla */
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* para evitar que se desborde si algo se sale */
 }
-
 .carousel-images .images {
   display: flex;
   width: 300%;
@@ -179,9 +177,10 @@ input#slide3:checked ~ .images {
 }
 
 .carousel-images {
-  display: flex;
-  width: 300%;
-  transition: transform 0.5s ease-in-out;
+  width: 100vw;      /* Usa todo el ancho de la pantalla */
+  overflow: hidden;  /* Oculta lo que se sale */
+  margin: 0;
+  padding: 0;
 }
 
 .carousel-images .images {
@@ -1459,7 +1458,9 @@ header {
   pointer-events: none; /* para que no sea clickeable */
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-40%);
+    margin: -30px; /* <-- este es clave */
+
 }
 
 /* Ajustes para móviles */
