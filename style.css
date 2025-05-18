@@ -1617,12 +1617,9 @@ body.menu .center {
 /* 🟡 Header sticky arriba (se queda en la parte superior solo cuando haces scroll) */
 /* Contenedor header sin posición fija */
 .header-inicio {
-  position: sticky;
-  top: 0;
   background-color: black;
-  padding: 10px 0;
   text-align: center;
-  z-index: 1000;
+  padding: 10px 0;
 }
 
 /* Contenedor para evitar que el contenido quede debajo */
@@ -1666,5 +1663,56 @@ body.menu .center {
   .menu-inicio .titulo-principal {
     font-size: 2em;
     margin: 0 20px;
+  }
+}
+/* Estilo general del menú en móviles */
+.menu-inicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Asegurar orden correcto (aunque el HTML ya está bien) */
+.menu-inicio li:nth-child(1) { order: 1; }
+.menu-inicio li:nth-child(2) { order: 2; }
+.menu-inicio li:nth-child(3) { order: 3; }
+.menu-inicio li:nth-child(4) { order: 4; }
+.menu-inicio li:nth-child(5) { order: 5; }
+
+/* Ajustes de enlaces */
+.menu-inicio li a {
+  color: white;
+  font-size: 1.2em;
+  text-decoration: none;
+  display: block;
+  padding: 5px;
+}
+
+/* Título VELLUTO */
+.titulo-principal {
+  font-size: 2em;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* Estilo para escritorio (opcional, para horizontal) */
+@media screen and (min-width: 768px) {
+  .menu-inicio {
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+/* Ajustes para celulares muy pequeños */
+@media (max-width: 480px) {
+  .nav-links a {
+    font-size: 18px;
+  }
+
+  .menu-img {
+    height: 250px;
   }
 }
