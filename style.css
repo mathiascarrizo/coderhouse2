@@ -338,11 +338,12 @@ header {
 @media (max-width: 768px) {
   .nav-links {
     flex-direction: column; /* Los elementos se alinean en columna */
-    gap: 20px;
+    gap: 8px;
   }
 
   .nav-links a {
-    padding: 10px;
+    padding: 6px 12px; /* menos padding en cada link */
+    font-size: 18px;
   }
   nav {
     margin-bottom: 10px; /* reduce espacio debajo del nav */
@@ -359,7 +360,7 @@ header {
   }
 
   header {
-    padding: 5px; /* menos padding en mobile */
+    padding: 8px 20px; /* menos padding en mobile */
   }
 }
 .carousel-container {
@@ -771,12 +772,12 @@ body.contacto main {
   .nav-links {
     flex-direction: column;
     align-items: flex-start; /* Alineación a la izquierda */
-    padding: 10px 0;
+    padding: 5px 0;
   }
 
   .nav-links a {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 6px 16px;
+    font-size: 15px;
     width: 100%; /* Asegura que los enlaces ocupen todo el ancho */
     text-align: left;
   }
@@ -785,12 +786,14 @@ body.contacto main {
   .nav-links .center {
     margin-left: 0;
     text-align: center;
+    padding: 0; /* quitar padding si tiene */
   }
 
   /* Ajustar márgenes en los elementos de la barra */
   .nav-links .right1,
   .nav-links .right2 {
     margin-left: 0;
+    padding: 0; /* reducir si tienen padding */
   }
 }
 
