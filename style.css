@@ -1550,7 +1550,7 @@ header {
     padding: 2px 0; /* menos espacio arriba y abajo */
 
     /* También asegurarse que no haya margin que genere espacio */
-    margin: 30px 0;
+    margin: 5px 0;
 
     font-size: 18px;
   }
