@@ -1493,15 +1493,15 @@ header {
     height: auto;
     padding: 10px 15px; /* menos padding para ahorrar espacio arriba */
   }
+
   nav {
     margin: 0 !important;
     padding: 0 !important;
   }
 
-
   .menu-inicio {
     flex-direction: column;
-    gap: 6px;  /* reducí gap de 15px a 6px para que quede más compacto */
+    gap: 6px; /* reducí gap de 15px a 6px para que quede más compacto */
     max-width: none;
   }
 
@@ -1509,13 +1509,13 @@ header {
     position: static;
     transform: none;
     font-size: 24px;
-    margin: -11px 0;  /* un poquito menos de margen */
+    margin: -11px 0; /* un poquito menos de margen */
   }
 
   .nav-links {
-    padding: 0 !important;  /* eliminar padding extra */
-    margin: 0 !important;   /* eliminar margen extra */
-    gap: 0px !important;    /* asegurá que gap esté presente y sea pequeño */
+    padding: 0 !important; /* eliminar padding extra */
+    margin: 0px !important; /* eliminar margen extra */
+    gap: 0px !important; /* asegurá que gap esté presente y sea pequeño */
   }
 
   .nav-links a {
@@ -1524,40 +1524,37 @@ header {
     font-size: 16px;
     width: 100%;
     text-align: left;
-      line-height: 0.8 !important; /* reduce altura de línea */
-
+    line-height: 0.8 !important; /* reduce altura de línea */
   }
-    .nav-links .center {
+  .nav-links .center {
     font-size: 16px !important;
     font-weight: normal !important;
     margin: 0 !important;
     padding: 1px 5px !important;
     line-height: 0.8 !important;
   }
-  nav, header {
-  margin: 0 !important;
-  padding: 0 !important;
+  nav,
+  header {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .Menuu-link,
+  .Empresa-link,
+  .contacto-link,
+  .titulo-principal {
+    display: block;
+    color: white;
+    text-decoration: none;
+
+    /* Reducir padding para pegar los enlaces */
+    padding: 2px 0; /* menos espacio arriba y abajo */
+
+    /* También asegurarse que no haya margin que genere espacio */
+    margin: 30px 0;
+
+    font-size: 18px;
+  }
 }
-.Menuu-link,
-.Empresa-link,
-.contacto-link {
-  display: block;
-  color: white;
-  text-decoration: none;
-
-  /* Reducir padding para pegar los enlaces */
-  padding: 2px 0;  /* menos espacio arriba y abajo */
-
-  /* También asegurarse que no haya margin que genere espacio */
-  margin: 0;
-
-  font-size: 18px;
-}
-}
-
-
-
-
 
 /* Para evitar que contenido quede tapado por el header */
 main {
