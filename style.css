@@ -1520,7 +1520,7 @@ header {
 
   .nav-links a {
     padding: 1px 5px !important; /* un poco menos de padding que tenías */
-    margin: 0 !important;
+    margin: -4 !important;
     font-size: 16px;
     width: 100%;
     text-align: left;
@@ -1537,6 +1537,21 @@ header {
   nav, header {
   margin: 0 !important;
   padding: 0 !important;
+}
+.Menuu-link,
+.Empresa-link,
+.contacto-link {
+  display: block;
+  color: white;
+  text-decoration: none;
+
+  /* Reducir padding para pegar los enlaces */
+  padding: 2px 0;  /* menos espacio arriba y abajo */
+
+  /* También asegurarse que no haya margin que genere espacio */
+  margin: 0;
+
+  font-size: 18px;
 }
 }
 
