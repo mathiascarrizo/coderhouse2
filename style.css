@@ -9,7 +9,13 @@ p {
   color: black;
   font-size: 30px;
 }
-
+.Tragos-y-bebidas {
+  border-radius: 5%;
+  padding: 15px;
+}
+.boton-tragos {
+  margin-bottom: 60px;
+}
 .titulo-principal {
   color: white;
   font-size: 65px;
@@ -27,13 +33,16 @@ h1 {
 .titulos {
   color: white;
 }
+.primer-parrafo {
+  margin-bottom: 5px; /* Espacio debajo del primer texto */
+}
+.segundo-parrafo {
+  margin-bottom: 20px; /* Espacio debajo del primer texto */
+}
 
 .titulos1 {
   color: darkolivegreen;
-}
-
-section {
-  text-align: center;
+  margin-bottom: 20px; /* Espacio debajo del primer texto */
 }
 
 section h2 {
@@ -42,13 +51,16 @@ section h2 {
 
 .titulos2 {
   color: white !important;
+  margin-bottom: 10px; /* Espacio debajo del primer texto */
 }
 
 .titulos3 {
   color: darkolivegreen;
+  margin-bottom: 20px; /* Espacio debajo del primer texto */
 }
 .titulos4 {
-  color: red;
+  color: coral;
+  margin-bottom: 20px; /* Espacio debajo del primer texto */
 }
 
 .contacto-link {
@@ -129,6 +141,7 @@ section h2 {
 
 .carrusel {
   width: 100vw; /* usa todo el ancho de la pantalla */
+  height: 300px;
   margin: 0;
   padding: 0;
   overflow: hidden; /* para evitar que se desborde si algo se sale */
@@ -136,12 +149,14 @@ section h2 {
 .carousel-images .images {
   display: flex;
   width: 300%;
+  height: 100%;
   transition: transform 0.5s ease-in-out;
 }
 
 .carousel-images img {
   width: 100%;
-  flex: 1;
+  height: 100%; /* se ajusta al alto del contenedor */
+
   object-fit: cover;
 }
 
@@ -180,6 +195,7 @@ input#slide3:checked ~ .images {
   width: 100vw; /* Usa todo el ancho de la pantalla */
   overflow: hidden; /* Oculta lo que se sale */
   margin: 0;
+  height: 100%;
   padding: 0;
 }
 
@@ -205,10 +221,10 @@ input#slide3:checked ~ .carousel-images .images {
 
 .carousel {
   position: relative;
-  width: 100%;
-  max-width: 800px;
+  width: 50%;
   margin: auto;
   overflow: hidden;
+  height: 3500px;
 }
 
 .carousel-images {
@@ -219,7 +235,7 @@ input#slide3:checked ~ .carousel-images .images {
 
 .carousel-images .images {
   display: flex;
-  width: 300%;
+  width: 600%;
   animation: carruselAnimado 9s infinite ease-in-out;
 }
 
@@ -262,7 +278,16 @@ header {
   align-items: center;
   box-sizing: border-box;
 }
-
+.menu-link {
+  font-size: 30px;
+  border-radius: 5%;
+  padding: 10px;
+  border: #000 solid 2px;
+  background-color: #3a3a3a;
+}
+.menu-main-title {
+  color: white;
+}
 .menu-container {
   display: flex;
   list-style: none;
@@ -286,8 +311,12 @@ header {
   white-space: nowrap;
 }
 
-.menu li a:hover {
+.menu-link:hover {
   background-color: red;
+  font-size: 30px;
+  border-radius: 5%;
+  padding: 10px;
+  border: #000 solid 2px;
 }
 
 /* Elementos del menú */
@@ -315,60 +344,50 @@ header div {
   justify-content: center;
 }
 
-/*estilos del menu */
+/* === RESET GENERAL === */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  color: white;
+  background-image: url("./asssets/fotod.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
-/* General body styles */
-/* Header styles */
+/* === HEADER === */
 header {
   background-color: #333;
   color: white;
-  padding: 10px;
+  padding: 10px 0;
   text-align: center;
 }
 
-/* El título centrado (por ejemplo, "VELLUTO") */
-.center {
-  flex-grow: 1;
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
 }
 
-/* Para pantallas pequeñas, ajustamos el diseño */
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column; /* Los elementos se alinean en columna */
-    gap: 8px;
-  }
-
-  .nav-links a {
-    padding: 6px 12px; /* menos padding en cada link */
-    font-size: 18px;
-  }
-  nav {
-    margin-bottom: 10px; /* reduce espacio debajo del nav */
-  }
-
-  .nav-links {
-    margin: 0;
-    padding: 0;
-    gap: 10px;
-  }
-
-  .nav-links a {
-    padding: 6px 10px;
-  }
-
-  header {
-    padding: 8px 20px; /* menos padding en mobile */
-  }
-}
-.carousel-container {
-  margin-top: 0;
-  padding-top: 0;
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
 }
 
-/* Menu header styles */
+.nav-links a:hover {
+  background-color: red;
+  border-radius: 5px;
+}
+
+/* === MENÚ === */
 .menu-header {
   text-align: center;
   margin-top: 20px;
@@ -376,49 +395,66 @@ header {
 
 .menu-title {
   font-size: 2.5em;
-  color: #333;
+  color: #ffff;
 }
 
 .menu-description {
   font-size: 1.2em;
-  color: #555;
+  color: #ffff;
   margin-top: 10px;
 }
 
-/* Image gallery styles */
-.menu-images {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
+/* === GALERÍA DE IMÁGENES DEL MENÚ === */
 .image-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.menu-item {
+  text-align: center;
   display: flex;
-  flex-wrap: wrap; /* Permite que las imágenes se ajusten automáticamente */
-  justify-content: space-between; /* Añade espacio entre las imágenes */
-  width: 80%; /* Controla el tamaño total de la galería */
-  max-width: 1200px; /* Evita que se extienda demasiado */
+  flex-direction: column;
+  align-items: center;
+  /* opcional: podés eliminarlo si no querés fondo negro */
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  width: 45%;
+  margin: 20px;
 }
 
-.image-gallery img {
-  width: 48%; /* Dos imágenes por fila */
-  height: 200px; /* Mantiene una altura uniforme */
-  object-fit: contain; /* Asegura que la imagen se recorte sin deformarse */
-  border-radius: 8px; /* Borde redondeado */
-  box-sizing: border-box;
-  margin-bottom: 20px; /* Espacio entre las filas */
+.menu-item img {
+  width: 80%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
-/* Ajuste de márgenes para mantener uniformidad */
-.image-gallery img:nth-child(odd) {
-  margin-right: 2%;
+.menu-item p {
+  font-size: 22px;
+  margin: 10px 0;
 }
 
-.image-gallery img:nth-child(even) {
-  margin-left: 2%;
+.menu-item button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-/* Footer styles */
+.menu-item button:hover {
+  background-color: #c0392b;
+}
+
+/* === FOOTER === */
 footer {
   background-color: #333;
   color: white;
@@ -429,142 +465,35 @@ footer {
   bottom: 0;
 }
 
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #3498db;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #2980b9;
-}
-
-/* Article and Section Styling */
-article {
-  margin: 20px;
-  text-align: center;
-}
-
-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centra el contenido */
-}
-article {
-  margin: 20px;
-  text-align: center;
-}
-
-/* Contenedor principal de la galería */
-.menu-images {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-/* Contenedor de las imágenes */
-.image-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 80%;
-  max-width: 1200px; /* Para evitar que se extienda demasiado */
-}
-
-/* Estilo para las imágenes */
-.image-gallery img {
-  width: 48%; /* Dos imágenes por fila */
-  height: 200px; /* Mantiene una altura uniforme */
-  object-fit: contain; /* Asegura que la imagen se recorte sin deformarse */
-  border-radius: 8px;
-  box-sizing: border-box;
-  margin-bottom: 20px;
-}
-
-/* Ajuste de márgenes para mantener uniformidad */
-.image-gallery img:nth-child(odd) {
-  margin-right: 2%;
-}
-
-.image-gallery img:nth-child(even) {
-  margin-left: 2%;
-}
-
-/* Elimina reglas conflictivas */
-img {
-  max-width: 100%;
-  height: auto;
-}
-.image-gallery img {
-  max-width: 48%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 8px;
-  box-sizing: border-box;
-  margin-bottom: 20px;
-}
-
-/* Asegúrate de que el archivo CSS esté bien referenciado en tu HTML */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #111; /* Fondo oscuro para la página */
-  color: white; /* Texto blanco por defecto */
-  background-image: url("./asssets/fotod.jpg");
-  background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
-  background-position: center; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita que se repita */
-  background-attachment: fixed; /* Fija la imagen para que no se mueva al hacer scroll */
-  height: 100%;
-  width: 100%;
-}
-
+/* === EMPRESA === */
 .empresa {
-  background-color: black; /* Fondo negro */
-  color: white; /* Texto blanco */
-  font-family: Arial, Helvetica, sans-serif; /* Fuente fina */
-  font-size: 30px; /* Tamaño de letra más grande */
-  line-height: 1.6; /* Espaciado entre líneas */
-  padding: 20px; /* Espaciado interno */
+  background-color: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  line-height: 1.6;
+  padding: 20px;
   max-width: 800px;
-  margin: 0 auto; /* Centrado del contenido */
-  border-radius: 10px; /* Bordes redondeados */
+  margin: 0 auto;
+  border-radius: 10px;
 }
 
 .empresa h2 {
-  font-size: 50px; /* Tamaño más grande para el título */
-  font-weight: lighter; /* Peso de la fuente fina */
+  font-size: 50px;
+  font-weight: lighter;
 }
 
 h3,
-.descripcion2 {
-  font-size: 24px; /* Ajusta el tamaño según prefieras */
-  color: darkolivegreen; /* Verde brillante */
-}
-
-p.descripcion2 {
-  font-size: 20px; /* Tamaño de fuente para los párrafos */
-  color: darkolivegreen; /* Verde brillante */
-}
-
+.descripcion2,
+.descripcion-texto1,
+.descripcion-texto2,
 .descripcion-texto3 {
-  font-size: 35px;
+  font-size: 24px;
   color: darkolivegreen;
 }
 
-.descripcion-texto2 {
-  font-size: 35px;
-  color: darkolivegreen;
-}
-.descripcion-texto1 {
-  font-size: 35px;
-  color: darkolivegreen;
+.descripcion2 {
+  font-size: 20px;
 }
 
 .empresa-description {
@@ -582,10 +511,45 @@ p.descripcion2 {
   margin: 30px auto;
   border-radius: 10px;
 }
+
 .empresa-header {
   display: flex;
   justify-content: center;
 }
+.empresa-gallery-flex {
+  align-items: center;
+  display: flex;
+  text-align: center;
+  justify-content: center; /* 🔧 esto centra horizontalmente */
+  margin-left: 600px;
+}
+.empresa-description {
+  transform: translateX(305px); /* mueve 40px a la derecha */
+  text-align: center;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .image-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-item img {
+    height: 180px;
+  }
+
+  .menu-item p,
+  .menu-item button {
+    font-size: 16px;
+  }
+}
+
 /* ESTILOS DE CONTACTO HTML : */
 /* Barra de navegación */
 
@@ -608,14 +572,41 @@ p.descripcion2 {
   white-space: nowrap; /* Evita que el texto se divida */
 }
 
+.menu-images {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.menu-img {
+}
 .menu {
   list-style: none;
   display: flex;
+
+  align-items: center;
+  flex-wrap: wrap;
   gap: 30px; /* Espacio entre ítems */
   padding: 0;
   margin: 0;
   width: 100%; /* Esto asegura que el menú ocupe todo el espacio disponible */
   justify-content: space-evenly;
+}
+.menu-index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 5750px;
+}
+.servicios {
+  height: 100%;
+}
+main {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
 }
 
 .menu li a {
@@ -688,7 +679,7 @@ body.contacto main {
   color: white;
   flex-grow: 1; /* Esto hace que VELLUTO ocupe el espacio restante */
   text-align: center; /* Centra el texto */
-  margin: 0 20px; /* Da espacio a los lados de "VELLUTO" */
+  margin: 0 -180px; /* Da espacio a los lados de "VELLUTO" */
 }
 
 .right-group {
@@ -712,12 +703,12 @@ body.contacto main {
 }
 
 .nav-links .right1 {
-  margin-left: -100px; /* Ajuste para mover la galería hacia la izquierda */
+  margin-left: 400px; /* Ajuste para mover la galería hacia la izquierda */
 }
 
 .nav-links .right2 {
   order: 2;
-  margin-left: -10px; /* Mueve GALERIA
+  margin-left: 100px; /* Mueve GALERIA
    más cerca de HOME */
   transform: translateX(-50%);
 }
@@ -965,6 +956,9 @@ h1 {
 .contact-container h2 span {
   color: green;
 }
+.contact-container {
+  transform: translateX(315px);
+}
 
 p {
   font-size: 1.2em;
@@ -998,6 +992,7 @@ button {
 button:hover {
   background-color: darkgreen;
 }
+
 @media (max-width: 600px) {
   .contact-container {
     width: 90%;
@@ -1368,6 +1363,7 @@ header {
   flex-grow: 1;
   text-align: center;
   font-size: 45px;
+  transform: translateX(-80px); /* mueve 40px a la izquierda */
 }
 .nav-links a.left1 {
   margin-right: 20px; /* Esto separa el botón Home del siguiente elemento */
@@ -1424,7 +1420,7 @@ body {
 }
 
 header {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -1445,7 +1441,7 @@ header {
   justify-content: center;
   align-items: center;
   list-style: none;
-  gap: 57px;
+  gap: 0px;
   padding: 0;
   margin: 0;
   width: 100%;
@@ -1555,8 +1551,12 @@ header {
     font-size: 18px;
   }
 }
+.center-velluto {
+  transform: translateX(60px); /* mueve 40px a la derecha */
+  font-size: 36px; /* o 2.5em, o 2rem */
+}
 
 /* Para evitar que contenido quede tapado por el header */
 main {
-  margin-top: 90px;
+  margin-top: 10px;
 }
