@@ -318,7 +318,10 @@ header {
   padding: 10px;
   border: #000 solid 2px;
 }
-
+.posicion-actual {
+  border-bottom: 2px solid red;
+  text-decoration: underline;
+}
 /* Elementos del menú */
 .menu li a {
   display: flex;
@@ -326,6 +329,9 @@ header {
   color: white; /* Ajusta el color según tu diseño */
   font-size: 18px;
   font-weight: bold;
+}
+#logo {
+  font-size: 24px;
 }
 
 /* Título central */
