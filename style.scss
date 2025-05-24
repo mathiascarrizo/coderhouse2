@@ -1,0 +1,119 @@
+// VARIABLES
+$primary-color: #f8f9fa;
+$hover-bg: red;
+$text-color: black;
+$font-title: 2rem;
+$font-subtitle: 1.2rem;
+$button-color: #fff;
+$button-bg: red;
+$button-hover-bg: darkred;
+$shadow-hover: 0 10px 20px rgba(0, 0, 0, 0.3);
+
+// MIXIN
+@mixin transition($args...) {
+  transition: $args;
+}
+
+// EXTENDIBLE
+%center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: $primary-color;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-section {
+  padding: 2rem;
+  text-align: center;
+
+  h2 {
+    font-size: $font-title;
+    margin-bottom: 1rem;
+  }
+
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+
+    .menu-item {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 0.8s ease-in-out forwards;
+      opacity: 0;
+
+      .menu-img-container {
+        position: relative;
+        overflow: hidden;
+        @include transition(transform 0.3s ease, box-shadow 0.3s ease);
+
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: $shadow-hover;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+
+        .menu-img-title {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          background-color: rgba(0, 0, 0, 0.6);
+          color: $button-color;
+          padding: 0.5rem 1rem;
+          border-radius: 5px;
+        }
+      }
+
+      .menu-info {
+        padding: 1rem;
+
+        p {
+          font-size: $font-subtitle;
+          color: $text-color;
+          margin-bottom: 1rem;
+        }
+
+        button {
+          background-color: $button-bg;
+          color: $button-color;
+          border: none;
+          padding: 0.5rem 1rem;
+          font-size: 1rem;
+          border-radius: 5px;
+          cursor: pointer;
+          @include transition(background-color 0.3s ease);
+
+          &:hover {
+            background-color: $button-hover-bg;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ANIMACIÓN
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
